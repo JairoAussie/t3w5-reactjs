@@ -1,9 +1,21 @@
 import './App.css';
+import FruitList from './FruitList';
+import Title from './Title';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Working on our own now</h1>
+      <Title />
+      <Title />
+      <Title />
+      <Title />
+      <ul>
+        <FruitList />
+      </ul>
+      <ol>
+        <FruitList />
+      </ol>
     </div>
 
   );
