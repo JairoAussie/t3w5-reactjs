@@ -1,8 +1,13 @@
-export default function Title (){
+export default function Title (props){
     return (
     <>
         <h1>The Fruit App!</h1>
-        <h3>Experimenting with fruits and React</h3>
+        {
+            props.loggedInUser ?
+            <h3>NavBar with my account option</h3>
+            : 
+            <h3>NavBar with log in and sign up options</h3>
+        }   
     </>    
     )
 }
