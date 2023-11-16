@@ -1,3 +1,6 @@
+import './FruitList.css'
+import ListGroup from 'react-bootstrap/ListGroup';
+
 
 export default function FruitList (props) {
     // it's not a good practice to use index as a key, if it's an array of objects, use the object id as a key
@@ -6,14 +9,14 @@ export default function FruitList (props) {
       return null;
     }
 
-    let fruitListItems = props.listToShow.map((fruit => <li key={fruit}>{fruit}</li>))
-    console.log(props.children);
+    let fruitListItems = props.listToShow.map((fruit => <ListGroup.Item className="listMessage" key={fruit}>{fruit}</ListGroup.Item>))
+    //console.log(props.children);
     return (
       <>
         <h3>{props.colour} fruits</h3>
-        <ul>
+        <ListGroup>
           {fruitListItems}
-        </ul>
+        </ListGroup>
         {props.children}
       </>
       
